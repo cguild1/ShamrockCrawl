@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Pass /codes/* requests to this front controller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
